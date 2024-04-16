@@ -4,13 +4,10 @@ import logo from "../assets/logo.png"; // Importa la imagen del logo
 import logoutIcon from "../assets/logoutIcon.png"; // Importa el icono de cerrar sesión
 
 const Navbar = ({ showTitles }) => {
-  // Obtenemos la ubicación actual
   const location = useLocation();
 
-  // Verificamos si estamos en la página de inicio
   const isHome = location.pathname === "/home";
 
-  // Verificamos si estamos en la página de login
   const isLogin = location.pathname === "/";
 
   return (

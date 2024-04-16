@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -13,7 +12,7 @@ const App = () => {
     <Router>
       <div className="flex flex-col h-screen">
         {/* Pasa la función setShowTitles al Navbar */}
-        <Navbar showTitles={showTitles} />
+        {showTitles && <Navbar showTitles={showTitles} />}
         <Routes>
           <Route exact path="/" element={<Login />} />
           {/* Utiliza "element" en lugar de "component" */}
